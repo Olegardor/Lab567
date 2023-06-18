@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/up_home"
+        android:title="Домой"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/clear_text"
+        android:title="Очистить"
+        android:icon="@drawable/baseline_search_off_24"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/by_name"
+        android:title="По названию"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/by_date"
+        android:title="По дате"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/sort"
+        android:title="Сортировать по алфавиту"
+        app:showAsAction="ifRoom" />
+</menu>

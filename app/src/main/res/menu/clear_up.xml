@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/up_home"
+        android:orderInCategory="100"
+        android:title="Домой"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/gal_op"
+        android:orderInCategory="100"
+        android:title="Галерея"
+        app:showAsAction="ifRoom" />
+
+</menu>

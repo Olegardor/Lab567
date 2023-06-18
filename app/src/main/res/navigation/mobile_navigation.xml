@@ -8,12 +8,42 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="by.bsuir.petrovskiy.goodsfinder.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="Находки"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_about"
         android:name="by.bsuir.petrovskiy.goodsfinder.ui.about.AboutFragment"
-        android:label="About"
+        android:label="О программе"
         tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="by.bsuir.petrovskiy.goodsfinder.ui.add.AddFragment"
+        android:label="Добавление"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/nav_delete"
+        android:name="by.bsuir.petrovskiy.goodsfinder.ui.delete.DeleteFragment"
+        android:label="Удаление"
+        tools:layout="@layout/fragment_delete" />
+
+    <fragment
+        android:id="@+id/nav_details"
+        android:name="by.bsuir.petrovskiy.goodsfinder.ui.details.DetailsFragment"
+        android:label="Детали"
+        tools:layout="@layout/fragment_details" />
+
+    <fragment
+        android:id="@+id/nav_edit"
+        android:name="by.bsuir.petrovskiy.goodsfinder.ui.edit.EditFragment"
+        android:label="Редактирование"
+        tools:layout="@layout/fragment_edit" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="by.bsuir.petrovskiy.goodsfinder.ui.search.SearchFragment"
+        android:label="Поиск"
+        tools:layout="@layout/fragment_search" />
 
 </navigation>

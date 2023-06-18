@@ -1,10 +1,13 @@
 package by.bsuir.petrovskiy.goodsfinder;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Gravity;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.AdapterView;
 import android.widget.Toolbar;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -65,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {

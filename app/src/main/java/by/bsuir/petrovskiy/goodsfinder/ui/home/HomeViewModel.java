@@ -4,16 +4,17 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import by.bsuir.petrovskiy.goodsfinder.ListItem;
+
 public class HomeViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private final MutableLiveData<ListItem> selectdItem = new MutableLiveData<>();;
 
-    public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+    public void selectItem(ListItem item) {
+        selectdItem.setValue(item);
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<ListItem> getSelectedItem() {
+        return selectdItem;
     }
 }

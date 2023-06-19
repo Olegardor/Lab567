@@ -92,6 +92,7 @@ public class SearchFragment extends Fragment {
         filtered.clear();
         filtered.addAll(finders);
         adapter.notifyDataSetChanged();
+        homeViewModel.setFinders2(finders);
     }
 
     @Override
@@ -99,6 +100,7 @@ public class SearchFragment extends Fragment {
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_content_main);
         switch (item.getItemId()) {
             case R.id.up_home:
+                clearList();
                 navController.navigate(R.id.nav_home);
                 return true;
             case R.id.clear_text:

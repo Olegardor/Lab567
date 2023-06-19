@@ -4,17 +4,49 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import by.bsuir.petrovskiy.goodsfinder.ListItem;
+import java.util.ArrayList;
+import java.util.List;
+
+import by.bsuir.petrovskiy.goodsfinder.FindersItem;
 
 public class HomeViewModel extends ViewModel {
 
-    private final MutableLiveData<ListItem> selectdItem = new MutableLiveData<>();;
+    private int selectedIndex;
 
-    public void selectItem(ListItem item) {
-        selectdItem.setValue(item);
+    private ArrayList<FindersItem> finders = new ArrayList<>();
+    private ArrayList<FindersItem> finders2 = new ArrayList<>();
+
+    private final MutableLiveData<FindersItem> selectItem = new MutableLiveData<>();
+
+    public void selectItem(FindersItem item) {
+        selectItem.setValue(item);
     }
 
-    public LiveData<ListItem> getSelectedItem() {
-        return selectdItem;
+    public LiveData<FindersItem> getSelectedItem() {
+        return selectItem;
+    }
+
+    public void setFinders(ArrayList<FindersItem> finders) {
+        this.finders = finders;
+    }
+
+    public ArrayList<FindersItem> getFinders() {
+        return finders;
+    }
+
+    public void setFinders2(ArrayList<FindersItem> finders2) {
+        this.finders2 = finders2;
+    }
+
+    public ArrayList<FindersItem> getFinders2() {
+        return finders2;
+    }
+
+    public void setSelectedIndex(int index) {
+        this.selectedIndex = index;
+    }
+
+    public int getSelectedIndex() {
+        return selectedIndex;
     }
 }

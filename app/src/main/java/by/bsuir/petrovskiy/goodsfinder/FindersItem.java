@@ -11,16 +11,16 @@ public class FindersItem {
     private String photo;
     private String date_create;
 
-    public FindersItem(String name, String description, String location_original, String date, String finder, String location_current, String photo, String date_create) {
-        this.name = name;
-        this.description = description;
-        this.location_original = location_original;
-        this.date = date;
-        this.finder = finder;
-        this.location_current = location_current;
-        this.photo = photo;
-        this.date_create = date_create;
-    }
+    //public FindersItem(String name, String description, String location_original, String date, String finder, String location_current, String photo, String date_create) {
+    //    this.name = name;
+    //    this.description = description;
+    //    this.location_original = location_original;
+    //    this.date = date;
+    //    this.finder = finder;
+    //    this.location_current = location_current;
+    //    this.photo = photo;
+    //    this.date_create = date_create;
+    //}
 
     public String getDate_create() {
         return date_create;

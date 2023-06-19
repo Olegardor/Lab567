@@ -8,13 +8,13 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/add_dis"
+        android:id="@+id/add_fin"
         android:title="Добавить"
         android:icon="@drawable/baseline_new_label_24"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/search_dis"
+        android:id="@+id/search_fin"
         android:title="Поиск"
         android:icon="@drawable/baseline_pageview_24"
         app:showAsAction="ifRoom" />

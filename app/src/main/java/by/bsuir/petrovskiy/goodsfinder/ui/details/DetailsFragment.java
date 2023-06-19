@@ -1,12 +1,16 @@
 package by.bsuir.petrovskiy.goodsfinder.ui.details;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -15,7 +19,12 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import by.bsuir.petrovskiy.goodsfinder.ListItem;
+import com.bumptech.glide.Glide;
+
+import java.io.File;
+import java.io.IOException;
+
+import by.bsuir.petrovskiy.goodsfinder.FindersItem;
 import by.bsuir.petrovskiy.goodsfinder.R;
 import by.bsuir.petrovskiy.goodsfinder.ui.home.HomeViewModel;
 
@@ -28,12 +37,39 @@ public class DetailsFragment extends Fragment {
 
         TextView textView_name = view.findViewById(R.id.textView_name_2);
         TextView textView_description = view.findViewById(R.id.textView_description_2);
+        TextView textView_location_original_2 = view.findViewById(R.id.textView_location_original_2);
+        TextView textView_date_2 = view.findViewById(R.id.textView_date_2);
+        TextView textView_finder_2 = view.findViewById(R.id.textView_finder_2);
+        TextView textView_location_current_2 = view.findViewById(R.id.textView_location_current_2);
+        ImageView imageView_photo = view.findViewById(R.id.imageView_photo);
 
         homeViewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
-        LiveData<ListItem> item = homeViewModel.getSelectedItem();
-        textView_name.setText(item.getValue().getTitle());
-        textView_description.setText(item.getValue().getDescription());
+        LiveData<FindersItem> item = homeViewModel.getSelectedItem();
 
+        textView_name.setText(item.getValue().getName());
+        Log.d("TextDet_check1", "");
+        textView_description.setText(item.getValue().getDescription());
+        textView_location_original_2.setText(item.getValue().getLocation_original());
+        textView_date_2.setText(item.getValue().getDate());
+        textView_finder_2.setText(item.getValue().getFinder());
+        textView_location_current_2.setText(item.getValue().getLocation_current());
+        String check = item.getValue().getPhoto();
+        File file = new File(check);
+        file.exists();
+        Log.d("TextDet_check0",file.toString());
+        Log.d("TextDet_check1",check);
+        try {
+            if (!TextUtils.isEmpty(check)) {
+                Glide.with(getActivity())
+                        .load(check)
+                        .into(imageView_photo);
+            }
+        }
+        catch (Exception e) {
+            Log.e("TextDet_e", e.getMessage(), e);
+        }
+
+        Log.d("TextDet_check2","");
         return view;
     }
 
